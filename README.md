@@ -26,15 +26,64 @@ A posição onde a SAD é mínima indica a melhor correspondência entre o templ
 
 ###### TESTE 1:
 
-<img src="/C209/Testes/Figure_1.jpg">
+<img src="/Testes/Figure_1.png">
 
 ###### TESTE 2:
 
-<img src="/C209/Testes/Figure_2.jpg">
+<img src="/Testes/Figure_2.png">
 
 ###### TESTE 3:
 
-<img src="/Testes/Figure_3.jpg">
+<img src="/Testes/Figure_3.png">
+
+#### CONCLUSÃO
+O Template Matching tem suas vantagens e desvantagens, e a eficácia da técnica depende muito do contexto da aplicação. Vamos dar uma olhada:
+
+Vantagens:
+
+Simplicidade:
+
+É fácil de entender e implementar, o que o torna acessível para aplicações simples.
+Computacionalmente Eficiente:
+
+Para imagens pequenas e templates simples, o Template Matching pode ser computacionalmente eficiente.
+Desvantagens:
+
+Sensibilidade a Variações:
+
+É sensível a variações de iluminação, rotação e escala. Pequenas mudanças podem afetar significativamente a correspondência.
+Limitado a Padrões Simples:
+
+Funciona melhor para padrões simples e pode ter dificuldades com variações complexas.
+Não Robusto:
+
+Pode não ser robusto o suficiente para ambientes onde as condições variam muito.
+Melhorias Possíveis:
+
+Normalização de Intensidade:
+
+Normalizar a intensidade dos pixels pode tornar o método mais robusto a variações de iluminação.
+Uso de Outros Métodos:
+
+Combinação com métodos de pré-processamento, como filtragem ou extração de características, pode melhorar a robustez.
+Incorporação de Informações Contextuais:
+
+Adição de informações contextuais pode melhorar a precisão, como considerar padrões ao redor do template.
+Utilização de Técnicas Avançadas:
+
+Métodos mais avançados, como técnicas baseadas em aprendizado de máquina, podem ser aplicados para melhorar a capacidade de generalização.
+Viabilidade com Outras Técnicas:
+
+Sim, é frequentemente viável e até recomendado combinar o Template Matching com outras técnicas. Por exemplo, você pode usar detecção de características para pré-processar a imagem e, em seguida, aplicar Template Matching para refinamento.
+Em resumo, o Template Matching é uma ferramenta valiosa em contextos específicos, mas suas limitações podem ser superadas com a combinação inteligente de técnicas adicionais.
+
+#### REFERÊNCIAS
+1. [https://community.revelo.com.br/reconhecimento-de-padroes-em-visao-computacional-para-identificacao-de-imagem-via-template-matching/]
+2. [https://www.ppgee.ufmg.br/defesas/1244M.PDF]
+3. [https://medium.com/geekculture/image-template-matching-methods-with-python-using-opencv-cd7fac319a2d]
+4. [https://stackoverflow.com/questions/12715673/numpy-template-matching-using-matrix-multiplications]
+5. [http://www.lps.usp.br/hae/apostila/tmatch-ead.pdf]
+6. [https://docplayer.com.br/86843068-Explicacao-simplificada-de-template-matching-casamento-de-mascara-ou-casamento-de-modelo.html]
 
 
 
