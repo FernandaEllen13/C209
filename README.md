@@ -5,6 +5,7 @@ Repositório contendo o projeto da matéria de C209 - Computação Gráfica
 
 #### INTEGRANTES:
 *Fernanda Ellen de Souza*
+
 *Leonardo dos Santos Ferreira*
 
 #### INTRODUÇÃO
