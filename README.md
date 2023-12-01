@@ -22,12 +22,7 @@ Em resumo, o Template Matching é uma técnica básica, mas eficaz, para encontr
 #### ALGORITMO
 O algoritmo criado para esse projeto teve como objetivo principal simplificar de maneira concisa e didática essa técnica tão famosa, sem usar bibliotecas que possam tornar a solução trivial. Usamos apenas a biblioteca Numpy para trabalhar com arrays, Matplotlib para melhor visualização dos resultados, e PIL para facilitar o processo de entrada da imagem. A métrica escolhida para encontrar semelhanças entre o template e a imagem original foi a Soma das Diferenças Absolutas.
 
-Nessa técnica, começamos com uma imagem de origem e uma imagem menor, que é o template que você está procurando na imagem maior. Coloque o canto superior esquerdo do template na posição inicial na imagem de origem.
-
-Para cada pixel no template e na região correspondente da imagem de origem, calcule a diferença absoluta entre os valores de intensidade dos pixels.
-A diferença absoluta é simplesmente a diferença entre os valores dos pixels, sem considerar a direção (sinal). Some todas as diferenças absolutas calculadas. Isso cria uma única medida que representa a dissimilaridade ou o "erro" entre o template e a região da imagem de origem. Desloque o template para a próxima posição na imagem de origem e repita o processo de cálculo da SAD.
-
-A posição onde a SAD é mínima indica a melhor correspondência entre o template e a região da imagem de origem.
+Nessa técnica, começamos com uma imagem de origem e uma imagem menor, que é o template que você está procurando na imagem maior. O template inicia na posição inicial da imagem de origem, e para cada pixel de ambos, calcula-se a diferença absoluta(ou seja, a diferença sem considerar o sinal) entre os valores de intensidade dos pixels. Ao fim, soma-se todas as diferenças absolutas calculadas, criando uma única medida que representa a dissimilaridade entre o template e a região da imagem de origem. Esse processo é repetido até que toda a região da imagem seja rastreada. A região onde a Soma das DIferenças Absolutas é mínima indica a melhor correspondência entre as duas imagens.
 
 ###### TESTE 1:
 
@@ -42,45 +37,13 @@ A posição onde a SAD é mínima indica a melhor correspondência entre o templ
 <img src="/Testes/Figure_3.png">
 
 #### CONCLUSÃO
-O Template Matching tem suas vantagens e desvantagens, e a eficácia da técnica depende muito do contexto da aplicação. Vamos dar uma olhada:
+Apesar de ser um método bastante difundido na área de processamento de imagens, seus algoritmos e técnicas tem suas vantagens e desvantagens, e sua eficácia está intimamente atralda ao contexto da aplicação. Entre as vantagens, temos sua simplicidade, sendo mais fácil entender e implementar do que outras técnicas dessa área. Além disso, é computacionalmente eficiente, não necessitando de processadores potentes para que seja aplicado.
 
-Vantagens:
+Já dentre as desvantagens, está sua sensibilidade a variações, como por exemplo iluminação, rotação e escala, com pequenas mudanças afetando significantemente a correspondência. Ademais, encontra-se limitado a padrões simples, podendo ter dificuldades com imagens mais complexas. Essas desvantagens podem ser contornadas fazendo o pré-processamento tanto da imagem quanto do template, como por exemplo normalizar a intensidade do pixel ou utilizar de técnicas como filtragem e extração de caracterísitcas. Há inclusive a possibilidade de utilizar técnicas conjuntas mais avançadas, como as que são baseadas em aprendizado de máquina, as quais podem melhorar a capacidade de generalização do algoritmo. 
 
-Simplicidade:
+Em resumo, o Template Matching é uma ferramenta valiosa em contextos expecíficos, cujas limitações podem ser superadas com a combinação inteligente de técnicas adicionais.
 
-É fácil de entender e implementar, o que o torna acessível para aplicações simples.
-Computacionalmente Eficiente:
 
-Para imagens pequenas e templates simples, o Template Matching pode ser computacionalmente eficiente.
-Desvantagens:
-
-Sensibilidade a Variações:
-
-É sensível a variações de iluminação, rotação e escala. Pequenas mudanças podem afetar significativamente a correspondência.
-Limitado a Padrões Simples:
-
-Funciona melhor para padrões simples e pode ter dificuldades com variações complexas.
-Não Robusto:
-
-Pode não ser robusto o suficiente para ambientes onde as condições variam muito.
-Melhorias Possíveis:
-
-Normalização de Intensidade:
-
-Normalizar a intensidade dos pixels pode tornar o método mais robusto a variações de iluminação.
-Uso de Outros Métodos:
-
-Combinação com métodos de pré-processamento, como filtragem ou extração de características, pode melhorar a robustez.
-Incorporação de Informações Contextuais:
-
-Adição de informações contextuais pode melhorar a precisão, como considerar padrões ao redor do template.
-Utilização de Técnicas Avançadas:
-
-Métodos mais avançados, como técnicas baseadas em aprendizado de máquina, podem ser aplicados para melhorar a capacidade de generalização.
-Viabilidade com Outras Técnicas:
-
-Sim, é frequentemente viável e até recomendado combinar o Template Matching com outras técnicas. Por exemplo, você pode usar detecção de características para pré-processar a imagem e, em seguida, aplicar Template Matching para refinamento.
-Em resumo, o Template Matching é uma ferramenta valiosa em contextos específicos, mas suas limitações podem ser superadas com a combinação inteligente de técnicas adicionais.
 
 #### REFERÊNCIAS
 1. [https://community.revelo.com.br/reconhecimento-de-padroes-em-visao-computacional-para-identificacao-de-imagem-via-template-matching/]
