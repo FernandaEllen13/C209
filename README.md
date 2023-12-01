@@ -3,6 +3,10 @@ Repositório contendo o projeto da matéria de C209 - Computação Gráfica
 
 ## TEMPLATE MATCHING
 
+#### INTEGRANTES:
+*Fernanda Ellen de Souza*
+*Leonardo dos Santos Ferreira*
+
 #### INTRODUÇÃO
 Nosso projeto buscou tratar sobre a técnica de Template Matching, ou casamento de templates, uma abordagem amplamente utilizada para identificar padrões em imagens digitais. O processo de casamento pode ocorrer de duas maneiras: com base nas características específicas do template T ou considerando toda a região do template T para encontrar correspondências em uma imagem analisada A. Em ambas as abordagens, é essencial empregar alguma medida de similaridade.
 
